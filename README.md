@@ -7,4 +7,8 @@ Let me explain basically what this is, it is a tabular cell based software where
 
 Each cell can contain a value, or a set of values as a 2D tensor (I may upgrade this eventually), and can have operations performed on it by the matching cell on the next layer which follows the same property, and this creates the layer on the page after those two which can then be operated on iteratively by the pages on its subsequent layer. The goal of this, is to make every odd layer a hidden state, with the first layer being the input and every even layer being a layer of the transformer. 
 
-I am hoping to combine this with my symbolic transformer framework, to develop a clear system for following the algebraic properties of the model. Think of how cells in an excel spreadsheet can accept equations that determine their values, but on the scale of a neural network model.
+I am hoping to combine this with my symbolic transformer framework, to develop a clear system for following the algebraic properties of the model. Think of how cells in an excel spreadsheet can accept equations that determine their values, but on the scale of a neural network model. 
+
+The eventual goal is to develop a model framework that can reverse engineer viable models for dataset pairs, and infer the usable relationships and patterns based on a direct alignment for input and output batches without requiring iterative gradient optimization, maybe by generating a list of possible optins and performing a genetic selection on ideal candidates that satisfy increasingly complex datasets.
+
+The basic workflow currently is every odd tab is a result page (except for the initial input) and every even tab is the computation tab where you can set the values and define the computations. I  will work on modifying it to increase the viability for training models, and handling datasets.
